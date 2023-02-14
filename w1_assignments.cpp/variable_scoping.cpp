@@ -13,6 +13,7 @@ int main()  {
     if(true) {
         int b=10;        //this b is a local variable of if condition
         cout<<b<<endl;
+        int  global_variable=400;
         cout<< global_variable<<endl;
     }
 
