@@ -14,7 +14,7 @@ int main() {
         //for every element, run lopp on brr
         for(int i=0;i<brr.size();i++) {
             if(element==brr[i]) {
-                //marking or we can use INT_MIN
+                //marking or we can use INT_MIN 
                 brr[i]=-1;
                 ans.push_back(element);
             }
