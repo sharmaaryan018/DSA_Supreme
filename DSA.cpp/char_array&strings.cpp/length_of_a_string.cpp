@@ -21,7 +21,7 @@ int main() {
     char name[100];
     cin>>name;
 
-    cout<<"Length of a String is: "<<getlength(name)<<endl;;
+    cout<<"Length of a String is: "<<getlength(name)<<endl;
    
 
     cout<<"length is : "<< strlen(name) <<endl;
