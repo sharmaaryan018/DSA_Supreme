@@ -16,7 +16,7 @@ public:
 
         //____VISITED SOLUTION____//
 
-        int ans=-1;
+        /*int ans=-1;
 
         for(int i=0;i<nums.size();i++) {
             int index=abs(nums[i]);
@@ -30,6 +30,12 @@ public:
             //visited mark
             nums[index] *= -1;
         }
-        return ans;
+        return ans;*/
+
+        //-----POSITIONING METHOD----- WITH TIME COMPLEXITY O(n) & SC O(1)
+        while(nums[0]!=nums[nums[0]]) {
+            swap(nums[0],nums[nums[0]]);
+        }
+        return nums[0]; 
     }
 };
