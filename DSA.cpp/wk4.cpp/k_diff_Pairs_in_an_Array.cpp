@@ -4,7 +4,7 @@ public:
     int findPairs(vector<int>& nums, int k){
         sort(nums.begin(), nums.end());
         set<pair<int,int>> ans;
-        int i=0,j=1;
+        int i=0,j =1;
 
         while(j<nums.size()) {
             int diff =nums[j]-nums[i];
@@ -53,7 +53,7 @@ public:
                 if(bs(nums, i+1,a[i]+k)!= -1) {
                     ans,insert(a[i], a[i]+k);
                 }
-            }
+            }              
             return ans.size();
             }
         }
