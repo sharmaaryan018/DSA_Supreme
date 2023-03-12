@@ -2,6 +2,7 @@ class Solution{
 public:
 
     int countPrimes(int n) {
+        
         if(n==0) return 0;
 
         vector<bool> prime(n, true);// all are prime marked already
