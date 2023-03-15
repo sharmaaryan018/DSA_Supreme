@@ -5,7 +5,7 @@ public:
         
         if(n==0) return 0;
 
-        vector<bool> prime(n, true);// all are prime marked already
+        vector<bool> prime(n+1, true);// all are prime marked already
 
         prime[0]=prime[1]=false;
 
