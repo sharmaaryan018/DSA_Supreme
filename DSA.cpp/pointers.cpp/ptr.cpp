@@ -46,7 +46,7 @@
     cout << p << endl;
     cout << *p << endl;
 
-    util(p);////NO CHANGE WILL BE THERE 
+    util(p);//// CHANGE WILL BE THERE  
     cout << "After function Calling " << endl;
     cout << a << endl;
     cout << p << endl;
