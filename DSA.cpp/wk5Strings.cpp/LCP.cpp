@@ -10,7 +10,7 @@ public:
 
             //for comparing ch with rest other strings
 
-            for(int j=1;j<strs[j].length();j++) {
+            for(int j=1;j<strs.size();j++) {
                 //not match
                 if(strs[j].size()<i || ch!=strs[j][i]) {
                     match=false;
