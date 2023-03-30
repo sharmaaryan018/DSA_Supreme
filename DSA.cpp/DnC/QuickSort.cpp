@@ -23,7 +23,7 @@ using namespace std;
     int j=e;
 
     while(i<pivotIndex && j>pivotIndex){
-        while(arr[i]<pivotElement){
+        while(arr[i]<=pivotElement){
             i++;
         }
         while(arr[j]>pivotElement){
@@ -55,8 +55,8 @@ void quickSort(int arr[], int s, int e){
 }
 
 int main(){
-    int arr[]={8,1,3,4,20,50,30};
-    int n=7;
+    int arr[]={8,1,3,5,5,5,5,1,1,4,4,4,20,50,30};
+    int n=15;
 
     int s=0;
     int e=n-1;
