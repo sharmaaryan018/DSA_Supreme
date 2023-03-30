@@ -49,7 +49,7 @@
     }
 
      //Copy Logic for right Array
-    while(rightIndex<len1){
+    while(rightIndex<len2){
         arr[mainArrayIndex++]=right[rightIndex++];
     }
  }
@@ -85,8 +85,8 @@
 
     for(int i=0;i<n;i++){
         cout<<arr[i]<<" ";
-    }
+    } 
     cout<<endl;
 
     return 0;
- }
+ } 
