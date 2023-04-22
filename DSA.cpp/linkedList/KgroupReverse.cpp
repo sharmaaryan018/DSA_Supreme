@@ -54,6 +54,49 @@ class Node {
         return slow;
     }
 
+    int getLength(Node* head){
+        int len =0;
+        Node* temp=head;
+        while(temp!=NULL){
+            temp=temp->next;
+            len++;
+        }
+        return len;
+    }
+
+    Node* reverseKNodes(Node* head,int k)
+{
+    if(head==NULL){
+        cout<<"LL is Empty"<<endl;
+        return NULL;
+    }
+    int len=getLength(head);
+    if(k>len){
+        return head;
+    }
+
+    //it means o. of nodes in ll is >=k
+    //step->A: revrese first k nodes of LL
+    Node* prev=NULL;
+    Node* curr=head;
+    Node* forward=curr->next;
+
+    int  count =0;
+
+    while(count<k){
+        forward=curr->next;
+        curr->next=prev;
+        prev=curr;
+        curr=forward;
+        count++;
+    }
+    if(forward!=NULL){
+        //we still have nodes to reverse
+       head->next= reverseKNodes(forward,k);
+    }
+    //step C: return head of the modified LL
+    return prev;
+}
 
 int main() { 
     Node* head= new Node(10);
@@ -68,12 +111,13 @@ int main() {
     third->next=fourth;
     fourth->next=fifth;
     fifth->next=sixth;
-    sixth->next=NULL;
+   // sixth->next=NULL;
 
     
     print(head);
-
-    cout<< "Middle node is: "<<getMiddle(head)->data<<endl;
+    head=reverseKNodes(head,3);
+    print(head);
+   // cout<< "Middle node is: "<<getMiddle(head)->data<<endl;
 
     return 0;
 }
