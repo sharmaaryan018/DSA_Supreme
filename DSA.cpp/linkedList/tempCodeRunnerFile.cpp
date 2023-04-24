@@ -28,7 +28,7 @@ class Node {
         }
         cout<<endl;
     }
-    Node* getMiddle(Node* &head){
+  /*  Node* getMiddle(Node* &head){
         if(head==NULL){
             //LL is empty
             cout<<"LL is empty"<<endl;
@@ -52,7 +52,7 @@ class Node {
             }
         }
         return slow;
-    }
+    }*/
 
    /* int getLength(Node* head){
         int len =0;
@@ -144,12 +144,12 @@ int main() {
     nine->next=fifth;
 
     
-    print(head);
+    //print(head);
    // head=reverseKNodes(head,3);
     //print(head);
    // cout<< "Middle node is: "<<getMiddle(head)->data<<endl;
 
-   cout<<"Loop is present or not: "<<checkForLoop(head)<<endl;
+   cout<<"Loop is present or not: "<<checkForLoop(head);
 
     return 0;
 }
