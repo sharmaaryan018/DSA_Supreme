@@ -3,7 +3,7 @@ using namespace std;
 
 class Node {
     public:
-    int data;
+    int data; 
     Node* next;
 
     Node(){
@@ -113,11 +113,12 @@ class Node {
              fast=fast->next;
              slow=slow->next;
             }
-        }
+        
 
         if(slow==fast){
             //loop present
             return true;
+        }
         }
         //fast null hogya
         return false;
