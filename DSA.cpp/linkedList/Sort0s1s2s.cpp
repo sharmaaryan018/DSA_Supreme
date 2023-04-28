@@ -64,7 +64,93 @@ void sortZOT(Node * &head){
         }
     }
 
+Node* sort(Node* head){
+    //create dummy nodes
 
+    Node* zeroHead= new Node(-1);
+    Node* zeroTail= zeroHead;
+
+    Node* oneHead= new Node(-1);
+    Node* oneTail= oneHead;
+
+    Node* twoHead= new Node(-1);
+    Node* twoTail= twoHead;
+
+    //traverse the original list
+    Node* curr =head;
+    while(curr!=head){
+
+        if(curr->data==0){
+            //take out the zero node
+            Node* temp=curr;
+            curr=curr->next;
+            temp->next=NULL;
+
+            //append the zero node in zeroHead LL
+            zeroTail->next=temp;
+            zeroTail=temp;
+        }
+        else if{
+                  //take out the one node
+            Node* temp=curr;
+            curr=curr->next;
+            temp->next=NULL;
+
+            //append the zero node in zeroHead LL
+            oneTail->next=temp;
+            oneTail=temp;
+        }
+              //take out the two node
+            Node* temp=curr;
+            curr=curr->next;
+            temp->next=NULL;
+
+            //append the zero node in zeroHead LL
+            twoTail->next=temp;
+            twoTail=temp;
+    }
+
+
+    // join them
+    //remove dummy nodes
+
+    // modify one wali list
+    Node* temp= oneHead;
+    oneHead= oneHead->next;
+    temp->next=NULL;
+    delete temp;
+
+    
+    // modify two wali list
+    Node* temp= twoHead;
+    twoHead= twoHead->next;
+    temp->next=NULL;
+    delete temp;
+
+    //join list
+    if(oneHead!=NULL){
+        //one wali list is non-empty
+        zerotail->next=onehead;
+        if(twoHead!=NULL)
+            oneTail->next= twoHead;
+    }
+    else {
+        //one wali list is empty
+        if(twoHead!=NULL)
+        zerotail=twoHead; 
+    }
+
+    //remove zeroHead dummy Node
+    temp=zeroHead;
+    zeroHead=zeroHead->next;
+    temp->next=NULL;
+    delete temp;
+    // Return head of the modified LL
+
+    return zeroHead;
+    
+
+}
 int main() {
   Node* head = new Node(1);
   Node* second = new Node(2);
@@ -84,6 +170,6 @@ int main() {
   print(head);
 
   sortZOT(head);
-  print(head);
+ print(head);
 
 }
