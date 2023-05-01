@@ -2,7 +2,7 @@
 #include<stack>
 using namespace std;
 
-void insertAtBottom(stack<int>&s, int target) {
+void insertAtBottom(stack<int> &s, int &target) {
     //base case
 
     if(s.empty()) {
@@ -20,7 +20,24 @@ void insertAtBottom(stack<int>&s, int target) {
      s.push(topElement);  
 }
 
+ void reverseStack(stack<int> &s) {
+    //base case
+    if(s.empty()) {
+        return;
+    }
 
+    //nahi pata
+
+    int target= s.top();
+    s.pop();
+
+    //reverse stack
+    reverseStack(s);
+
+    //insert at bottom target 
+    insertAtBottom(s,target);
+
+ }
 
 int main() {
 
@@ -31,22 +48,15 @@ int main() {
     s.push(40);
     s.push(50);
 
-    if(s.empty()) {
-        cout<<"Stack is empty"<<endl;
-        return 0;
-    }
+    reverseStack(s);
 
-    int target=s.top();
-    s.pop();
-    insertAtBottom(s,target);
+    cout<<"printing"<<endl;
 
-    cout<<"Printing"<<endl;
-    while(!s.empty()){ 
+    while(!s.empty()) {
         cout<<s.top()<<" ";
         s.pop();
     }
+
     cout<<endl;
-       
     return 0;
 }
-
