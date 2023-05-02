@@ -48,7 +48,7 @@ int main() {
     s.push(60);
     s.push(30);
    
-   sortStack(s);
+   sortStack(s );
 
     cout<< "printing" <<endl;
 
