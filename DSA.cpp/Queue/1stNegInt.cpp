@@ -11,7 +11,7 @@ void solve(int arr[], int n, int k) {
         if(arr[i]<0){
             q.push_back(i);
         }
-    }
+    } 
 
     //Process the Reamaining Windows-> IMPORTANRT PROCESS
     for(int i =k;i<n;i++) {
