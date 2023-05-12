@@ -52,7 +52,7 @@ void levelOrderTraversal(Node *root) {
             cout<<endl;
             if(!q.empty()) {
                 q.push(NULL);
-            }
+            } 
         }
         else {
             cout<<temp->data<<" ";
