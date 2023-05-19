@@ -19,7 +19,7 @@ Node* buildTree() {
     cout<<"Enter the data: "<<endl;
     cin>>data;
 
-    if(data==-1) {
+    if(data==-1)   {
         return NULL;
     }
     //STEPS-> A, B and C.
