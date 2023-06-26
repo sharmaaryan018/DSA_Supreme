@@ -60,7 +60,7 @@ bool kthAncestor(Node* root, int k, int p) {
  // when coming back 
  //check left and right have answers or not
 
- if(leftAns||rightAns)
+ if(leftAns||rightAns) 
  k--;
 
  if(k==0) {
