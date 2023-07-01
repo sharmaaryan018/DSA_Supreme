@@ -72,7 +72,7 @@ void printRightBoundry(Node* root) {
     if(root->left == NULL && root->right == NULL)
     return;
 
-    if(root->right) {
+    if(root->right) {*
     printRightBoundry(root->right);
     }
     else {
