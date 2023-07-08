@@ -110,6 +110,46 @@ void postOrderTraversal(Node* root) {
     postOrderTraversal(root->left);
     postOrderTraversal(root->right);
     cout<<root->data<<" ";
+    }  
+
+//assuming there are only unique values in tree
+    bool findNodeInBST(Node* root, int target) {
+// base case
+    if(root->data == target)
+    return true;
+
+    if(target>root->data) {
+        // fing target in right subtree
+        return findNodeInBST(root->right, target);
+    }
+    else {
+        return findNodeInBST(root->left, target);
+    }
+
+    }
+
+    int minVal(Node* root) {
+        Node* temp = root;
+        if(temp == NULL) {
+           return -1; 
+        }
+
+        while(temp->left != NULL) {
+            temp = temp ->left;
+        }
+        return temp->data;
+    }
+
+    int maxVal(Node* root) {
+        Node* temp = root;
+        if(temp == NULL) {
+           return -1; 
+        }
+
+        while(temp->right != NULL) {
+            temp = temp ->right;
+        }
+        return temp->data;
     }
 
 int main() {
@@ -127,5 +167,13 @@ int main() {
     cout<<"Printing postorder: "<<endl;
     postOrderTraversal(root);
     cout<<endl;
+
+    bool ans = findNodeInBST(root,15);
+    cout<<"present or not : "<<ans<<endl;
+
+    cout<< endl<<"Minimum value is :: "<<minVal(root)<<endl;
+
+     cout<< endl<<"Maximum value is :: "<<maxVal(root)<<endl;
     return 0;
 }
+
