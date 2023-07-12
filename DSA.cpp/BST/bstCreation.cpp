@@ -208,7 +208,7 @@ int main() {
 
     // cout<< endl<<"Minimum value is :: "<<minVal(root)<<endl;
 
-     cout<< endl<<"Maximum value is :: "<<maxVal(root)<<endl;
+     cout<< endl<<"Maximum value is :: "<<maxVal(root)<<endl; 
 
      deleteNodeInBST(root,150);
      levelOrderTraversal(root);
