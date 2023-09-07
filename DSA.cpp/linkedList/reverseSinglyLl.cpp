@@ -179,6 +179,8 @@ Node* reverse(Node* &prev,Node* &curr){
     //1 base case solve then recursion will take care
     Node* forward=curr->next;
     curr->next=prev;
+    // prev=curr;
+    // curr=forward;
 
     reverse(curr,forward);
 }
@@ -208,9 +210,10 @@ int main(){
      print(head);
     Node* prev=NULL;
     Node* curr=head;
-    head= reverse(prev,curr);
+//    head= reverse(prev,curr);
         cout<<endl;
         cout<<"Reversed Linked List"<<endl;
+       head= reverse(prev,curr);
         print(head);
         cout<<endl;
 

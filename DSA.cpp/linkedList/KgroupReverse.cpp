@@ -92,6 +92,7 @@ class Node {
     }
     if(forward!=NULL){
         //we still have nodes to reverse
+        // cout<<head->next->data;
        head->next= reverseKNodes(forward,k);
     }
     //step C: return head of the modified LL
