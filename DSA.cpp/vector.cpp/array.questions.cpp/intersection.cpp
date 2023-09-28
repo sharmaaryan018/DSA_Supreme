@@ -13,10 +13,10 @@ int main() {
         int element =arr[i];
         //for every element, run lopp on brr
         for(int i=0;i<brr.size();i++) {
-            if(element==brr[i]) {
+            if(element==brr[j]) {
                 //marking or we can use INT_MIN 
                 brr[i]=-1;
-                ans.push_back(element);
+                 ans.push_back(element);
             }
         }
     }
