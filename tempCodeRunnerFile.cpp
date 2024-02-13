@@ -1,5 +1,19 @@
 #include<iostream>
 using namespace std;
+<<<<<<< HEAD
+
+int main() {
+    int n;
+    cin >> n;
+    for(int i=0;i++;i<n) {
+        for(int j=0;j<n;j++) {
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+    
+}
+=======
 class node{
 public:
 char data[10];
@@ -269,3 +283,4 @@ case 7: exit(0);
 }while(1);
 return 0;
 }
+>>>>>>> e2ace3c942ee51ae8bcb41f17b84b94893f52d6d
